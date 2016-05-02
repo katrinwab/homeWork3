@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements>
+  <elem cost="10" count="1" uri="\image\tea.png" >Чай</elem>
+  <elem cost="15" count="3" uri="\image\coffee.png" >Кофе</elem>
+  <elem cost="12" count="10" uri="\image\milk.png" >Молоко</elem>
+  <elem cost="15" count="0" uri="\image\cocao.png" >Какао</elem>
+  <elem cost="11" count="15" uri="\image\juice.png" >Сок</elem>
+  <elem cost="5" count="6" uri="\image\water.png" >Вода</elem>
+  <elem cost="20" count="12" uri="\image\chocolate.png" >Горячий шоколад</elem>
+  <elem cost="14" count="8" uri="\image\yogurt.png" >Йогурт</elem>
+  <elem cost="15" count="20" uri="\image\cola.png" >Газировка</elem>
+  <elem cost="17" count="7" uri="\image\kefir.png" >Кефир</elem>
+</Elements>

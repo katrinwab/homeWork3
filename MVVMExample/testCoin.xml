@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements>
+  <elem isBlocked="true">1</elem>
+  <elem isBlocked="true">2</elem>
+  <elem isBlocked="false">3</elem>
+  <elem isBlocked="true">5</elem>
+  <elem isBlocked="true">10</elem>
+  <elem isBlocked="false">15</elem>
+</Elements>
