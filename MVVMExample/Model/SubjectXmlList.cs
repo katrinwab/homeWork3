@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Xml;
 
 namespace MVVMExample.Model
@@ -9,7 +10,14 @@ namespace MVVMExample.Model
 
         protected SubjectXmlList(string nameXml)
         {
-            NameXml = nameXml;
+            NameXml = bingPathToAppDir(nameXml);
+        }
+
+        private string bingPathToAppDir(string localPath)
+        {
+            string currentDir = Environment.CurrentDirectory;
+            var directory = new DirectoryInfo(Path.GetFullPath(Path.Combine(currentDir, @"..\..\" + localPath)));
+            return directory.ToString();
         }
 
         public void Init()

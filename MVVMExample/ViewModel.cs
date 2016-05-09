@@ -71,7 +71,7 @@ namespace MVVMExample
             BuyCommand = new RelayCommand(arg => BuyMethod());
 
             var uc = new UnityContainer();
-            uc.LoadConfiguration("");
+            uc.LoadConfiguration();
             var providerDrink = uc.Resolve<IProvider>();
             Drinks = providerDrink.GetInformation().Select(item => item as Drink).ToList();
             Drinks = Drinks.Where(drink => drink.Count > 0).OrderBy(x => x.Cost).ToList();
