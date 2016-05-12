@@ -4,7 +4,7 @@ namespace MVVMExample.Model.Drink
 {
     interface IDrinkList
     {
-        List<Drink> List { get; set; }
+        List<DrinkObject> List { get; set; }
 
         void Init();
     }

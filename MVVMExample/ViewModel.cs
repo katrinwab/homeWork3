@@ -7,7 +7,6 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using MVVMExample.Model.Coin;
 using MVVMExample.Model.Drink;
-using MVVMExample.Model.Provider;
 
 namespace MVVMExample
 {
@@ -16,8 +15,8 @@ namespace MVVMExample
         public ICommand ClickCommand { get; set; }
         public ICommand BuyCommand { get; set; }
 
-        private List<Coin> _listCoins; 
-        public List<Coin> Coins
+        private List<CoinObject> _listCoins; 
+        public List<CoinObject> Coins
         {
             get
             {
@@ -29,9 +28,9 @@ namespace MVVMExample
             }
         }
 
-        private List<Drink> _listDrinks; 
+        private List<DrinkObject> _listDrinks; 
 
-        public List<Drink> Drinks
+        public List<DrinkObject> Drinks
         {
             get
             {
@@ -72,20 +71,17 @@ namespace MVVMExample
 
             var uc = new UnityContainer();
             uc.LoadConfiguration();
-            var providerDrink = uc.Resolve<IProvider>();
-            Drinks = providerDrink.GetInformation().Select(item => item as Drink).ToList();
+            var providerDrink = uc.Resolve<ProviderDrink>();
+            Drinks = providerDrink.GetInformation();
             Drinks = Drinks.Where(drink => drink.Count > 0).OrderBy(x => x.Cost).ToList();
 
-            uc.LoadConfiguration("CoinXml");
-            var providerCoin = uc.Resolve<IProvider>();
-            Coins = providerCoin.GetInformation().Select(item => item as Coin).ToList();
+            var providerCoin = uc.Resolve<ProviderCoin>();
+            Coins = providerCoin.GetInformation();
             Coins = Coins.OrderBy(x => x.Rating).ToList();
 
             Balance = 0;
             SelectedIndexCoin = 0;
             SelectedIndexDrink = 0;
-            
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

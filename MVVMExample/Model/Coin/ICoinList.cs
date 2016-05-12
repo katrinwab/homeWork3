@@ -4,7 +4,7 @@ namespace MVVMExample.Model.Coin
 {
     interface ICoinList
     {
-        List<Coin> List { get; set; }
+        List<CoinObject> List { get; set; }
 
         void Init();
     }

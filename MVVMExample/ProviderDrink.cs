@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using MVVMExample.Model.Drink;
 
-namespace MVVMExample.Model.Provider
+namespace MVVMExample
 {
-    class ProviderDrink: IProvider
+    class ProviderDrink
     {
         private readonly IDrinkList _drinkList;
 
@@ -13,9 +12,9 @@ namespace MVVMExample.Model.Provider
             _drinkList = drinkList;
         }
 
-        public List<ISubject> GetInformation()
+        public List<DrinkObject> GetInformation()
         {
-            return _drinkList.List.Cast<ISubject>().ToList();
+            return _drinkList.List;
         }
     }
 }

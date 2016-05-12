@@ -1,8 +1,8 @@
 ﻿namespace MVVMExample.Model.Drink
 {
-    class Drink: ISubject
+    class DrinkObject
     {
-        public Drink(int cost, int count, string name, string imageUri)
+        public DrinkObject(int cost, int count, string name, string imageUri)
         {
             Name = name;
             Count = count;

@@ -2,9 +2,9 @@
 using System.Linq;
 using MVVMExample.Model.Coin;
 
-namespace MVVMExample.Model.Provider
+namespace MVVMExample
 {
-    class ProviderCoin : IProvider
+    class ProviderCoin
     {
         private readonly ICoinList _coinList;
 
@@ -13,9 +13,9 @@ namespace MVVMExample.Model.Provider
             _coinList = coinList;
         }
 
-        public List<ISubject> GetInformation()
+        public List<CoinObject> GetInformation()
         {
-            return _coinList.List.Cast<ISubject>().ToList();
+            return _coinList.List;
         }
     }
 }

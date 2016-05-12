@@ -7,7 +7,7 @@ namespace MVVMExample.Model.Coin
     {
         public CoinXmlList(string nameXml) : base(nameXml)
         {
-            List = new List<Coin>();
+            List = new List<CoinObject>();
             Init();
         }
 
@@ -15,9 +15,9 @@ namespace MVVMExample.Model.Coin
         {
             var isBloked = bool.Parse(node.Attributes["isBlocked"].Value);
             var rating = int.Parse(node.InnerText);
-            List.Add(new Coin(rating, isBloked));
+            List.Add(new CoinObject(rating, isBloked));
         }
 
-        public List<Coin> List { get; set; }
+        public List<CoinObject> List { get; set; }
     }
 }

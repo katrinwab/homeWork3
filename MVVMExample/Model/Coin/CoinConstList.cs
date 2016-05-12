@@ -9,17 +9,17 @@ namespace MVVMExample.Model.Coin
             Init();
         }
 
-        public List<Coin> List { get; set; }
+        public List<CoinObject> List { get; set; }
 
         public void Init()
         {
-            List = new List<Coin>();
-            List.Add(new Coin(1, true));
-            List.Add(new Coin(2, true));
-            List.Add(new Coin(3, false));
-            List.Add(new Coin(5, false));
-            List.Add(new Coin(10, true));
-            List.Add(new Coin(15, false));
+            List = new List<CoinObject>();
+            List.Add(new CoinObject(1, true));
+            List.Add(new CoinObject(2, true));
+            List.Add(new CoinObject(3, false));
+            List.Add(new CoinObject(5, false));
+            List.Add(new CoinObject(10, true));
+            List.Add(new CoinObject(15, false));
         }
     }
 }

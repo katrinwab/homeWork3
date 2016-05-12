@@ -79,18 +79,16 @@
     <Compile Include="Converter\CostToEnableConverter.cs" />
     <Compile Include="Converter\CostToBackgroundConverter.cs" />
     <Compile Include="Converter\ImageConverter.cs" />
-    <Compile Include="Model\Coin\Coin.cs" />
+    <Compile Include="Model\Coin\CoinObject.cs" />
     <Compile Include="Model\Coin\CoinConstList.cs" />
     <Compile Include="Model\Coin\CoinXmlList.cs" />
     <Compile Include="Model\Coin\ICoinList.cs" />
-    <Compile Include="Model\Drink\Drink.cs" />
+    <Compile Include="Model\Drink\DrinkObject.cs" />
     <Compile Include="Model\Drink\DrinkConstList.cs" />
     <Compile Include="Model\Drink\DrinkXmlList.cs" />
     <Compile Include="Model\Drink\IDrinkList.cs" />
-    <Compile Include="Model\ISubject.cs" />
-    <Compile Include="Model\Provider\IProvider.cs" />
-    <Compile Include="Model\Provider\ProviderCoin.cs" />
-    <Compile Include="Model\Provider\ProviderDrink.cs" />
+    <Compile Include="ProviderCoin.cs" />
+    <Compile Include="ProviderDrink.cs" />
     <Compile Include="Model\SubjectXmlList.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="ViewModel.cs" />
@@ -136,8 +134,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="testCoin.xml" />
-    <Resource Include="testDrink.xml" />
+    <Resource Include="xml\testCoin.xml" />
+    <Resource Include="xml\testDrink.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\chocolate.png" />

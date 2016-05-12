@@ -1,8 +1,8 @@
 ﻿namespace MVVMExample.Model.Coin
 {
-    class Coin: ISubject
+    class CoinObject
     {
-        public Coin(int rating, bool isBlocked)
+        public CoinObject(int rating, bool isBlocked)
         {
             Rating = rating;
             IsBlocked = isBlocked;

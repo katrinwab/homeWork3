@@ -7,7 +7,7 @@ namespace MVVMExample.Model.Drink
     {
         public DrinkXmlList(string nameXml) : base(nameXml)
         {
-            List = new List<Drink>();
+            List = new List<DrinkObject>();
             Init();
         }
 
@@ -17,9 +17,9 @@ namespace MVVMExample.Model.Drink
             var count = int.Parse(node.Attributes["count"].Value);
             var uri = node.Attributes["uri"].Value;
             var name = node.InnerText;
-            List.Add(new Drink(cost, count, name, uri));
+            List.Add(new DrinkObject(cost, count, name, uri));
         }
 
-        public List<Drink> List { get; set; }
+        public List<DrinkObject> List { get; set; }
     }
 }
